@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/language_option_kor"
+        android:title="KOR" />
+
+    <item
+        android:id="@+id/language_option_eng"
+        android:title="ENG" />
+
+    <item
+        android:id="@+id/language_option_null"
+        android:title="X" />
+</menu>

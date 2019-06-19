@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/calling_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="10mm">
+
+            <TextView
+                android:id="@+id/receiver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Receiver"
+                android:textSize="25dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video calling..."
+                android:textColor="@color/white"
+                android:textSize ="12dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10mm"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/video_calling_drop_call"
+                android:layout_width="11mm"
+                android:layout_height="11mm"
+                android:src="@drawable/end_call"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/talking_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10mm"
+            android:paddingTop="2.5mm"
+            android:paddingBottom="2.5mm"
+            android:paddingLeft="2mm"
+            android:paddingRight="2mm"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/video_call_rotate_camera_button"
+                android:layout_width="4.5mm"
+                android:layout_height="4.5mm"
+                android:background="@null"
+                android:padding="0.4mm"
+                android:scaleType="centerInside"
+                android:src="@drawable/video_call_rotate_camera"
+                android:layout_alignParentEnd="true"/>
+
+            <ToggleButton
+                android:id="@+id/video_call_mute_button"
+                android:layout_width="4.5mm"
+                android:layout_height="4.5mm"
+                android:padding="1.5mm"
+                android:background="@drawable/video_call_mute_btn"
+                android:layout_toStartOf="@+id/video_call_rotate_camera_button"
+                android:textOff=""
+                android:textOn=""
+                android:layout_marginRight="2mm"/>
+
+            <ToggleButton
+                android:id="@+id/video_call_hide_camera_button"
+                android:layout_width="4.5mm"
+                android:layout_height="4.5mm"
+                android:background="@drawable/video_call_hide_camera"
+                android:layout_toStartOf="@+id/video_call_mute_button"
+                android:textOff=""
+                android:textOn=""
+                android:layout_marginRight="2mm"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/video_view_group"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <org.webrtc.SurfaceViewRenderer
+                android:id="@+id/fullscreen_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/call_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"/>
+
+                <org.webrtc.SurfaceViewRenderer
+                    android:id="@+id/side_video_view"
+                    android:layout_width="15mm"
+                    android:layout_height="20mm"
+                    android:layout_margin="2.5mm"
+                    android:layout_gravity="right"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v4.widget.Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/drop_call"
+                    android:layout_width="10mm"
+                    android:layout_height="10mm"
+                    android:layout_gravity="center"
+                    android:background="@drawable/badge_circle"
+                    android:src="@drawable/end_call" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

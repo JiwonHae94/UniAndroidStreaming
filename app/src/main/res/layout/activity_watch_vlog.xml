@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:elevation="1mm">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:paddingLeft="1mm">
+
+            <ImageButton
+                android:layout_width="3mm"
+                android:layout_height="5mm"
+                android:padding="1.5mm"
+                android:paddingRight="2mm"
+                android:layout_gravity="left|center_vertical"
+                android:gravity="left|center_vertical"
+                android:src="@drawable/back_btn"
+                android:scaleType="centerCrop"
+                android:id="@+id/back"
+                android:background = "@null"
+                android:textColor = "#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text = "VLOG"
+                android:textSize = "2mm"
+                android:textColor = "#000000"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:paddingRight="1mm">
+
+            <ToggleButton
+                android:layout_width="3mm"
+                android:layout_height="3mm"
+                android:id="@+id/vlog_like"
+                android:textOn=""
+                android:textOff=""
+                android:background="@drawable/vlog_like"
+                android:layout_gravity="center_vertical">
+
+            </ToggleButton>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/vlog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="2mm"
+        android:paddingLeft="1mm"
+        android:paddingRight="1mm"
+        android:orientation="vertical"
+        android:layout_below="@+id/page_top"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/key_board_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.skku.jiwon_hae.graduate_project_android_streaming.vlog.vlog_videoView
+                    android:id="@+id/vlog_videoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="1mm"
+                    android:paddingRight="1mm"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="4mm"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/viewer_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="4mm"
+                            android:text="n"
+                            android:textSize="10dp"
+                            android:gravity="left|center_vertical" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="4mm"
+                            android:text=" 시청자"
+                            android:textSize="10dp"
+                            android:gravity="left|center_vertical" />
+
+                        <TextView
+                            android:id="@+id/timeStamp"
+                            android:layout_width="0dp"
+                            android:layout_height="4mm"
+                            android:layout_weight="1"
+                            android:textSize="10dp"
+                            android:layout_gravity="right"
+                            android:text="n"
+                            android:gravity="right|center_vertical"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0.5mm"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/uploader_profile_pic_icon"
+                            android:layout_width="3.5mm"
+                            android:layout_height="3.5mm"
+                            android:scaleType="centerInside"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/uploaderName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="11dp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="1mm" />
+
+                            <TextView
+                                android:id="@+id/tags"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="7dp"
+                                android:text="tags"
+                                android:layout_marginLeft="1mm"
+                                android:visibility="gone"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="0.5mm"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:src="@drawable/vlog_like_icon"
+                            android:layout_width="3.5mm"
+                            android:layout_height="3.5mm"
+                            android:scaleType="fitXY"
+                            android:padding="0.5mm"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11dp"
+                            android:textStyle="bold"
+                            android:textColor="#6cb3f5"
+                            android:text="좋아요 "/>
+
+                        <TextView
+                            android:id="@+id/no_of_likes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="0.3mm"
+                            android:textColor="#6cb3f5"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0.5mm"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center_vertical">
+
+                        <ImageView
+                            android:src="@drawable/comments"
+                            android:layout_width="3.5mm"
+                            android:layout_height="3.5mm"
+                            android:scaleType="centerInside"
+                            android:padding="0.5mm"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11dp"
+                            android:textStyle="bold"
+                            android:textColor="#6cb3f5"
+                            android:text="댓글 "/>
+
+                        <TextView
+                            android:id="@+id/no_of_comments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="11dp"
+                            android:textStyle="bold"
+                            android:textColor="#6cb3f5"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/vlog_comments_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2mm">
+
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/key_board_layout"
+        android:layout_width="match_parent"
+        android:layout_height="8mm"
+        android:padding="1mm"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="#dfdfdf">
+
+        <EditText
+            android:id="@+id/comment_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="11dp"
+            android:layout_height="match_parent"
+            android:hint ="댓글 추가"
+            android:paddingLeft="1mm"
+            android:background="@drawable/round_div1"/>
+
+        <ImageButton
+            android:id="@+id/save_comment"
+            android:background="@null"
+            android:layout_width="5mm"
+            android:layout_marginLeft="1mm"
+            android:padding="0.8mm"
+            android:scaleType="centerInside"
+            android:layout_height="match_parent"
+            android:src="@drawable/save_comment"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

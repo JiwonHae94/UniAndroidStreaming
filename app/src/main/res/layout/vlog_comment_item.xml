@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="1mm"
+    android:paddingBottom="1mm"
+    android:paddingLeft="2mm"
+    android:paddingRight="2mm"
+    android:id="@+id/vlog_comments">
+
+    <ImageView
+        android:id="@+id/commenter_profile_pic"
+        android:layout_width="4mm"
+        android:layout_height="4mm"
+        android:layout_gravity="center_vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <TextView
+            android:id="@+id/commenter_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:textSize = "11dp"
+            android:textColor = "#000000"
+            android:textStyle="bold"
+            android:paddingBottom="0.2mm"/>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="userName"
+            android:textSize = "11dp"
+            android:textColor = "#000000"
+            android:paddingTop="0.2mm"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

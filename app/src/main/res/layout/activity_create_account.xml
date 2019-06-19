@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jiwon_hae.streaming_application.account.create_account">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "로그인 방식"
+            android:textSize="11dp"/>
+
+        <LinearLayout
+            android:layout_width="35mm"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="1mm" />
+
+            <Button
+                android:id="@+id/create_account_email"
+                android:layout_width="match_parent"
+                android:layout_height="6mm"
+                android:background="@drawable/round_btn"
+                android:text="이메일"
+                android:textSize="12.5dp"
+                android:textColor="#000000"
+                android:layout_marginRight="0.5mm"
+                android:layout_marginLeft="0.5mm"
+                android:elevation="1mm"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2mm" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/create_account_gmail"
+                android:layout_width="match_parent"
+                android:layout_height="7mm"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2mm"/>
+
+            <TextView
+                android:id="@+id/create_acc_register"
+                android:layout_width="wrap_content"
+                android:layout_height="0mm"
+                android:layout_weight="1"
+                android:text="회원가입"
+                android:textSize = "11dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0mm"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="right"
+                android:textSize="10dp"
+                android:text="회원가입시 동의한다는 뜻입니다. "/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:text="이용약관"
+                android:textStyle="bold"/>
+
+            <Space
+                android:layout_width="0.05mm"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=","
+                android:textSize="10dp"/>
+
+            <Space
+                android:layout_width="0.2mm"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:text="개인정보취급방침"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

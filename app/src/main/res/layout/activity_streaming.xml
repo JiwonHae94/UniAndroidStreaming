@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.jiwon_hae.streaming_application.streamer_client.streamer.streaming">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.pedro.rtplibrary.view.AutoFitTextureView
+                android:id="@+id/streaming_textureView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <ImageView
+                android:id="@+id/streamer_profile_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/streaming_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#78000000"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10mm"
+                    android:gravity="center_vertical|right">
+
+                    <ImageButton
+                        android:id="@+id/streaming_cancel"
+                        android:layout_width="4mm"
+                        android:layout_height="4mm"
+                        android:layout_margin="1mm"
+                        android:background="@null"
+                        android:src="@drawable/close"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:scaleType="centerCrop"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight= "9"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20mm"
+                        android:orientation="vertical">
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5mm" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="18mm"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="1mm"
+                            android:layout_marginRight="1mm">
+
+                            <ImageButton
+                                android:id="@+id/streaming_profile_pic_icon"
+                                android:layout_width="13mm"
+                                android:layout_height="13mm"
+                                android:textColor = "@color/white"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:scaleType="centerInside"
+                                android:background="@null"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="0.8mm">
+
+                                <EditText
+                                    android:id="@+id/streaming_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white"
+                                    android:hint = "LIVE 제목"
+                                    android:inputType="textPersonName"
+                                    android:textColorHint="#bfbfbf"
+                                    android:textSize = "18dp"
+                                    android:layout_marginTop="1.5mm"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:background="@null"/>
+
+                                <EditText
+                                    android:id="@+id/streaming_tag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:inputType="textPersonName"
+                                    android:layout_marginBottom="2mm"
+                                    android:textColor="@color/white"
+                                    android:hint = "#LIVE 태그하기"
+                                    android:textColorHint="#bfbfbf"
+                                    android:textSize = "13dp"
+                                    android:background="@null"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="1.5mm" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/streaming_startLive"
+                        android:layout_width="30mm"
+                        android:layout_height="8mm"
+                        android:text="방송하기"
+                        android:background="@drawable/round_btn_to_home"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="50mm"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/stremaing_layout_whenLive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10mm"
+                    android:padding="1mm"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/streamer_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true">
+
+                        <LinearLayout
+                            android:layout_width="30mm"
+                            android:layout_height="5.5mm"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:background="@drawable/streamer_name">
+
+                            <Space
+                                android:layout_width="5.5mm"
+                                android:layout_height="5mm" />
+
+                            <LinearLayout
+                                android:layout_width="20mm"
+                                android:layout_height="match_parent"
+                                android:paddingBottom="0.1mm"
+                                android:paddingTop="0.1mm"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="1mm">
+
+                                <TextView
+                                    android:id="@+id/streaming_streamerId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="left"
+                                    android:gravity="left"
+                                    android:text="유저아이디"
+                                    android:textSize="11dp"
+                                    android:layout_marginTop="0.2mm"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentStart="true"/>
+
+                                <TextView
+                                    android:id="@+id/streaming_title_when_live"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="left"
+                                    android:gravity="left"
+                                    android:text="1"
+                                    android:textSize="11dp"
+                                    android:textColor="@color/white"
+                                    android:layout_alignParentStart="true"/>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <HorizontalScrollView
+                            android:id="@+id/streamer_watcher_list"
+                            android:layout_width="20mm"
+                            android:layout_height="match_parent">
+
+                        </HorizontalScrollView>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/streamer_profile_pic_when_streaming"
+                        android:layout_width="5.5mm"
+                        android:layout_height="5.5mm"
+                        android:background="@drawable/round_icon_btn"
+                        android:layout_centerVertical="true"/>
+
+                    <ImageButton
+                        android:id="@+id/streaming_stop_streaming"
+                        android:layout_width="4mm"
+                        android:layout_height="4mm"
+                        android:background="@null"
+                        android:src="@drawable/close"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="1mm">
+
+                    <ImageView
+                        android:layout_width="2.5mm"
+                        android:layout_height="2.5mm"
+                        android:src="@drawable/streaming_end_time"
+                        android:background="@null"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"/>
+
+                    <Chronometer
+                        android:id="@+id/streaming_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="0.2mm"/>
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/chatting_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/listview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30mm"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8.3mm"
+            android:layout_alignBottom="@+id/below_listview">
+
+            <ListView
+                android:id="@+id/chatting_listview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:stackFromBottom="true"
+                android:transcriptMode="alwaysScroll">
+            </ListView>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/below_listview"
+            android:layout_width="match_parent"
+            android:layout_height="80mm"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="1mm">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="8mm"
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="1mm">
+
+                    <ImageButton
+                        android:id="@+id/chat_appear"
+                        android:layout_width="5.5mm"
+                        android:layout_height="5.5mm"
+                        android:scaleType="fitXY"
+                        android:padding="0.5mm"
+                        android:background="@drawable/round_icon_btn"/>
+
+                    <FrameLayout
+                        android:id="@+id/translation"
+                        android:layout_width="5.5mm"
+                        android:layout_height="5.5mm"
+                        android:layout_marginLeft="1mm"
+                        android:scaleType="fitXY"
+                        android:padding="0.5mm"
+                        android:background="@drawable/round_icon_btn"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/translation_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/streaming_translation"
+                            android:padding="0.5mm"
+                            android:scaleType="centerInside"/>
+
+                        <TextView
+                            android:id="@+id/current_lang_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:padding="0.1mm"
+                            android:text=""
+                            android:textColor="@color/poll_color4"
+                            android:textStyle="bold"
+                            android:textSize="11dp"
+                            android:gravity="center"/>
+
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/poll_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/poll_appear"
+                            android:layout_width="5.5mm"
+                            android:layout_height="5.5mm"
+                            android:layout_marginLeft="1mm"
+                            android:scaleType="fitXY"
+                            android:padding="0.5mm"
+                            android:background="@drawable/round_icon_btn"/>
+
+                        <TextView
+                            android:id="@+id/badge_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/poll_appear"
+                            android:layout_alignEnd="@id/poll_appear"
+                            android:layout_alignRight="@id/poll_appear"
+                            android:text="!"
+                            android:visibility="gone"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:layout_marginStart="-0.3dp"
+                            android:layout_marginTop="-0.5mm"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            android:background="@drawable/badge_circle"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:minWidth="4mm"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:padding="1mm">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/stream_no_of_likes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="11dp"/>
+
+                    <ToggleButton
+                        android:id="@+id/stream_like"
+                        android:layout_width="5.5mm"
+                        android:layout_height="5.5mm"
+                        android:scaleType="fitXY"
+                        android:padding="0.5mm"
+                        android:textOn=""
+                        android:textOff=""
+                        android:background="@drawable/stream_like"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chat_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="8mm"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingTop="0.5mm"
+                android:paddingBottom="0.5mm"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true">
+
+                <EditText
+                    android:id="@+id/chat_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:textColor="#000000"
+                    android:hint="채팅..."
+                    android:textSize="13dp"
+                    android:textColorHint="#919191"/>
+
+                <Button
+                    android:id="@+id/chat_submit_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:textSize="15dp"
+                    android:text="전송"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

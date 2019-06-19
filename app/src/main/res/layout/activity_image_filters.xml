@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jiwon_hae.streaming_application.image.filter.image_filters">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingRight="2mm"
+        android:paddingLeft="2mm">
+
+        <ImageButton
+            android:id="@+id/image_filter_back_btn"
+            android:layout_width="5mm"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:scaleType="centerInside"
+            android:background="@null"
+            android:padding="1.2mm"/>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="7"
+            android:text = "FILTERS"
+            android:textStyle="bold"
+            android:textSize = "2mm"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="5mm"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center_vertical|right"
+            android:text="다음"
+            android:textSize="11dp"
+            android:background = "@null"
+            android:textColor = "@color/next"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="match_parent"
+        android:paddingLeft="1mm"
+        android:paddingRight="1mm"
+        android:layout_gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_height="5mm"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="2mm"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm">
+
+        <ImageView
+            android:layout_width="3.5mm"
+            android:layout_height="match_parent"
+            android:src="@drawable/brightness"
+            android:scaleType="centerInside"/>
+
+        <SeekBar
+            android:id="@+id/control_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="2mm">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_original"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:id="@+id/filterName"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Original"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_grey"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Grey"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_erosion"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Erosion"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_dilation"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Dilate"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_blur"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Blur"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_canny"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Canny"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="1mm">
+
+                    <ImageView
+                        android:id="@+id/filter_negative"
+                        android:layout_width="13mm"
+                        android:layout_height="13mm"
+                        android:scaleType="fitXY"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Negative"
+                        android:textSize="11dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>

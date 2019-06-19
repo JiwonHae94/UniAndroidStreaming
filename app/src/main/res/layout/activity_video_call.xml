@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm">
+
+
+        <ImageView
+            android:id="@+id/video_call_new_friend"
+            android:layout_width="4mm"
+            android:layout_height="4mm"
+            android:src="@drawable/add_friend"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:padding="0.3mm"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text = "VIDEO CALL"
+            android:textSize = "2mm"
+            android:textColor = "@color/next"
+            android:textStyle="bold"/>
+
+        <Space
+            android:layout_width="4mm"
+            android:layout_height="4mm"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm">
+
+        <ImageView
+            android:layout_width="2.3mm"
+            android:layout_height="2.3mm"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:id="@+id/friend_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1.5mm"
+            android:background="@null"
+            android:hint = "검색"
+            android:textSize="2mm"
+            android:textColorHint="#bababa"
+            android:textColor="#000000"
+            android:lines="1"
+            android:inputType="textFilter"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#bababa"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:paddingLeft="2mm"
+        android:paddingRight="2mm">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4mm"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends"
+                android:textColor="#9c9c9c"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridView_friends"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:horizontalSpacing="2mm">
+
+        </GridView>
+
+    </LinearLayout>
+
+</LinearLayout>

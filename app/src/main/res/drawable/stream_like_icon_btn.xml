@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+        <solid android:color="@color/white" />
+        <stroke android:width="0.1mm" android:color="@color/white"/>
+        <corners android:bottomRightRadius="30dp"
+            android:bottomLeftRadius="30dp"
+            android:topRightRadius="30dp"
+            android:topLeftRadius="30dp"/>
+    </shape>
+</item>
+<item
+    android:drawable="@drawable/stream_like_icon"
+    android:width="4mm"
+    android:height="4mm"
+    android:gravity="center"/>
+</layer-list>

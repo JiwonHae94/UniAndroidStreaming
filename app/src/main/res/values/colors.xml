@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#aebcc6</color>
+    <color name="colorPrimary">#90a5ad</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bottomNavigation">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="background">#db6472</color>
+    <color name="transparent_white">#64fcfcfc</color>
+    <color name="transparent_black">#64000000</color>
+    <color name="transparent">#00ff0000</color>
+    <color name ="poll_color1">#55d0fd</color>
+    <color name ="poll_color2">#5ff468</color>
+    <color name ="poll_color3">#ef9169</color>
+    <color name ="poll_color4">#f954a0</color>
+    <color name ="pieChart2">#bfa8ab</color>
+    <color name="next">#1987d7</color>
+</resources>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jiwon_hae.streaming_application.account.create_account_email"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="4mm"
+        android:text="회원가입"
+        android:textSize = "11dp"
+        android:textColor = "#b4b4b4"
+        android:layout_marginLeft="2mm"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <TextView
+            android:layout_width="2mm"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text='이메일'
+            android:textSize="12dp"
+            android:textColor="#000000"
+            android:minWidth="10mm"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/create_acc_email"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="이메일"
+                android:textSize="12dp"
+                android:layout_marginLeft="1mm"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" @ "
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+
+            <EditText
+                android:id="@+id/create_acc_email_add"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="주소"
+                android:textSize="12dp"
+                android:layout_marginLeft="1mm"
+                android:gravity="center"
+                android:inputType="textEmailAddress"/>
+
+            <Spinner
+                android:id="@+id/create_acc_spinner"
+                android:layout_width="6mm"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxWidth="10mm">
+
+            </Spinner>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <TextView
+            android:layout_width="2mm"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text='유저이름'
+            android:textSize="12dp"
+            android:textColor="#000000"
+            android:minWidth="10mm"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/create_acc_userName"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="유저이름"
+                android:textSize="12dp"
+                android:layout_marginLeft="1mm"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <TextView
+            android:layout_width="2mm"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text='비밀번호'
+            android:textSize="12dp"
+            android:textColor="#000000"
+            android:minWidth="10mm"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/create_acc_password"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="비밀번호"
+                android:textSize="12dp"
+                android:layout_marginLeft="1mm"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <TextView
+            android:layout_width="2mm"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text='재확인'
+            android:textSize="12dp"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="9"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/create_acc_recheckPW"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="비밀번호 재확인"
+                android:textSize="12dp"
+                android:layout_marginLeft="1mm"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="8mm"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="2mm">
+
+        <Button
+            android:id="@+id/create_acc_next"
+            android:background = "@color/white"
+            android:elevation="5mm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1mm"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="다음"
+            android:textSize="11dp"/>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.7"/>
+
+</LinearLayout>

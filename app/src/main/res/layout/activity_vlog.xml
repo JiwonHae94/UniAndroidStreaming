@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignTop="@+id/vlog_main"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text = "VLOG"
+            android:textSize = "2mm"
+            android:textColor = "@color/next"
+            android:textStyle="bold"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <GridView
+            android:id="@+id/vlog_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1mm"
+            android:horizontalSpacing="1mm"
+            android:background="@color/white">
+
+        </GridView>
+
+        <ImageButton
+            android:id="@+id/add_vlog"
+            android:layout_margin="2mm"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="9mm"
+            android:layout_height="9mm"
+            android:padding="1.3mm"
+            android:src="@drawable/record_btn"
+            android:scaleType="centerInside"
+            android:background="@drawable/round_icon_btn1"/>
+    </RelativeLayout>
+</LinearLayout>

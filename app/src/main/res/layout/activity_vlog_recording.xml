@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/vlog_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.opencv.android.JavaCameraView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/video_view"/>
+
+        <RelativeLayout
+            android:id="@+id/vlog_record_main"
+            android:layout_width="match_parent"
+            android:layout_height="20mm"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/video_view">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/record_layout">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5">
+
+                        <ProgressBar
+                            android:id="@+id/vlog_record"
+                            android:layout_width="12mm"
+                            android:layout_height="12mm"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            android:background="@drawable/circular_progressbar_background"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:max="60000"
+                            android:progress="65"
+                            android:layout_centerInParent="true"/>
+
+                        <ImageButton
+                            android:id="@+id/vlog_mask"
+                            android:layout_width="5mm"
+                            android:layout_height="5mm"
+                            android:src="@drawable/vlog_mask"
+                            android:layout_centerVertical="true"
+                            android:background="@null"
+                            android:scaleType="fitXY"/>
+
+                        <ImageButton
+                            android:id="@+id/vlog_gallery"
+                            android:layout_width="5mm"
+                            android:layout_height="5mm"
+                            android:src="@drawable/vlog_gallery"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/vlog_round_gallery"
+                            android:scaleType="centerInside"
+                            android:padding="5dp"/>
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"/>
+
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignTop="@+id/vlog_main"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:paddingLeft="1mm">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="취소"
+                android:id="@+id/cancel"
+                android:textSize="11dp"
+                android:background = "@null"
+                android:textColor = "#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text = "VLOG"
+                android:textSize = "2mm"
+                android:textColor = "#000000"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:paddingRight="1mm">
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center_vertical|right"
+                android:text="다음"
+                android:textSize="11dp"
+                android:background = "@null"
+                android:textColor = "@color/next"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mask_layout"
+        android:background="@color/transparent_black"
+        android:layout_width="match_parent"
+        android:layout_height="30mm"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mask_display">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="1mm">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mask_dog1"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mask_dog1"
+                        android:background="@null"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/mask_dog2"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mask_dog2"
+                        android:background="@null"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/mask_cat1"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mask_cat1"
+                        android:background="@null"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/mask_cat2"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mask_cat2"
+                        android:background="@null"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/mask_rabbit"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mask_rabbit"
+                        android:background="@null"
+                        android:layout_weight ="1"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2mm">
+
+
+                    <ImageView
+                        android:id="@+id/mask_mice"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/mask_mouse"
+                        android:background="@null"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/face_detection_display"
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/no_mask"
+                        android:background="@null"
+                        android:padding = "1mm"
+                        android:layout_weight="1"/>
+
+                    <Space
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:layout_weight="1">
+
+                    </Space>
+
+                    <Space
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:layout_weight="1">
+
+                    </Space>
+
+                    <Space
+                        android:layout_width="8mm"
+                        android:layout_height="8mm"
+                        android:layout_weight="1">
+
+                    </Space>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="6mm"
+            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/mask_display"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:padding="1.5mm">
+
+            <ImageButton
+                android:id="@+id/remove_masks"
+                android:layout_width="3mm"
+                android:layout_height="3mm"
+                android:src="@drawable/remove_masks"
+                android:background="@null"
+                android:scaleType="centerInside"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

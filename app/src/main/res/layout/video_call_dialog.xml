@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="40mm"
+        android:layout_height="32mm"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:layout_width="40mm"
+            android:layout_height="25mm"
+            android:orientation="vertical"
+            android:layout_marginTop="8mm"
+            android:background="@drawable/round_div1">
+
+            <TextView
+                android:id="@+id/video_call_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="userName"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginTop="10mm"/>
+
+            <Button
+                android:id="@+id/video_call_start"
+                android:layout_marginTop="1.5mm"
+                android:layout_width="33mm"
+                android:layout_height="6mm"
+                android:layout_gravity="center_horizontal"
+                android:text="영상통화 걸기"
+                android:textColor="@color/white"
+                android:background="@drawable/round_btn2"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_call_callerImage"
+            android:layout_width="17mm"
+            android:layout_height="17mm"
+            android:scaleType="centerInside"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

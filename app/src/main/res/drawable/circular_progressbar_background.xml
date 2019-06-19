@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item>
+    <shape
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="ring"
+        android:innerRadiusRatio="2.5"
+        android:thickness="7dp"
+        android:useLevel="false">
+
+        <solid android:color="#ffffff" />
+
+    </shape>
+</item>
+<item android:drawable="@drawable/vlog_record"
+    android:width="5mm"
+    android:height="5mm"
+    android:gravity="center"/>
+</layer-list>

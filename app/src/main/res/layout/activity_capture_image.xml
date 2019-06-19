@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jiwon_hae.streaming_application.camera.capture.capture_image">
+
+    <TextureView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp">
+
+        <ImageButton
+            android:id="@+id/capture_btn"
+            android:layout_width="10mm"
+            android:scaleType="centerInside"
+            android:layout_height="10mm"
+            android:src="@drawable/nav_stream_btn"
+            android:background="@null"/>
+
+        <ProgressBar
+            android:id="@+id/capture_upload_progress"
+            android:layout_width="10mm"
+            android:layout_height="10mm"
+            android:background="@null"
+            android:visibility="invisible"/>
+
+
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingLeft="1mm"
+        android:paddingTop="1mm"
+        android:paddingBottom="1mm">
+
+        <ImageView
+            android:id="@+id/friend_profile_image"
+            android:layout_width="60dp"
+            android:scaleType="centerInside"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="6"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="1mm">
+
+            <TextView
+                android:id="@+id/add_friend_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:text="유저 이름"
+                android:gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/add_friend_email"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="유저 아이디"
+                android:textSize="11dp"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_friend_btn"
+            android:layout_width="10mm"
+            android:layout_height="match_parent"
+            android:padding="1mm"
+            android:layout_margin="1mm"
+            android:text="+ 추가"
+            android:textColor="#6cb3f5"
+            android:textSize="12dp"
+            android:background="@drawable/round_btn1"/>
+
+
+    </LinearLayout>
+</LinearLayout>

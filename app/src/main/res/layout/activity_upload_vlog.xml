@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jiwon_hae.streaming_application.vlog.upload_vlog_videos.upload_vlog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/page_top"
+            android:layout_width="match_parent"
+            android:layout_height="7mm"
+            android:orientation="horizontal"
+            android:elevation="1mm">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:paddingLeft="1mm">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="취소"
+                    android:id="@+id/cancel"
+                    android:textSize="11dp"
+                    android:background = "@null"
+                    android:textColor = "#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text = "VLOG"
+                    android:textSize = "2mm"
+                    android:textColor = "#000000"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingRight="1mm">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:gravity="center_vertical|right"
+                    android:text="저장"
+                    android:textSize="11dp"
+                    android:background = "@null"
+                    android:textColor = "@color/next"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30mm"
+            android:orientation="horizontal"
+            android:padding="2mm">
+
+            <ImageView
+                android:id="@+id/vlog_preview"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <EditText
+                android:id="@+id/vlog_tags"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:padding="1mm"
+                android:hint="캡션추가"
+                android:textSize="11dp"
+                android:background="@null"
+                android:textColor="#000000"
+                android:textColorHint="#c6c5c5"
+                android:gravity="top"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/key_board_layout"
+        android:layout_width="match_parent"
+        android:layout_height="8mm"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/add_tag"
+            android:layout_width="8mm"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="#"
+            android:background="@color/transparent"
+            android:textSize="20dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

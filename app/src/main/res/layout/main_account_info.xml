@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/page_top"
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_alignTop="@+id/vlog_main"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text = "ACCOUNT"
+            android:textSize = "2mm"
+            android:textColor = "@color/next"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/no_login_user">
+
+            <Button
+                android:id="@+id/to_account"
+                android:layout_width="match_parent"
+                android:layout_height="7mm"
+                android:text="계정"
+                android:textSize = "2mm"
+                android:textStyle="bold"
+                android:background="@drawable/round_btn"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/has_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/userProfilePic"
+                android:layout_width="15mm"
+                android:layout_height="15mm"
+                android:layout_gravity="center_horizontal"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:layout_marginTop="2mm"/>
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:text="bdc00151"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="1mm"/>
+
+            <TextView
+                android:id="@+id/userId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#bcbcbc"
+                android:textSize="7dp"
+                android:text="bdc00151@hanmail.net"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0.3mm"/>
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="7mm"
+                android:text="로그아웃"
+                android:background="@drawable/round_btn"
+                android:layout_marginTop="10mm"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.7"
+        android:layout_alignParentTop="true"
+        android:id="@+id/main_container"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="7mm"
+        android:minHeight="30dp"
+        android:background="@color/bottomNavigation"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:elevation="1mm">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"/>
+
+            <ToggleButton
+                android:id="@+id/nav_video_call"
+                android:layout_width="3.1mm"
+                android:layout_height="3.1mm"
+                android:checked="true"
+                android:textOff=""
+                android:textOn=""
+                android:background="@drawable/nav_face_talk"
+                android:textSize="15dp"
+                android:tag = "nav_video_call"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:id="@+id/nav_live"
+                android:layout_width="4mm"
+                android:layout_height="4mm"
+                android:checked="false"
+                android:textOff=""
+                android:textOn=""
+                android:background="@drawable/nav_live"
+                android:textSize="15dp"
+                android:tag = "nav_live"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/nav_stream"
+                android:layout_width="6mm"
+                android:layout_height="6mm"
+                android:layout_gravity="center"
+                android:background="@drawable/nav_stream_btn"
+                android:scaleType="centerInside"
+                android:layout_marginLeft="1mm"
+                android:layout_marginRight="1mm"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:id="@+id/nav_vlog"
+                android:layout_width="4mm"
+                android:layout_height="4mm"
+                android:checked="false"
+                android:textOff= ""
+                android:textOn= ""
+                android:background="@drawable/nav_vlog"
+                android:textSize="15dp"
+                android:tag="nav_vlog"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <ToggleButton
+                android:id="@+id/nav_account"
+                android:layout_width="4mm"
+                android:layout_height="4mm"
+                android:checked="false"
+                android:textOff= ""
+                android:textOn= ""
+                android:background="@drawable/nav_setting"
+                android:textSize="15dp"
+                android:tag = "nav_account"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+</LinearLayout>

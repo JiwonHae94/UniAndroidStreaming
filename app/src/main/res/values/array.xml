@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="email_choice">
+        <item>직접입력</item>
+        <item>네이버</item>
+        <item>다음</item>
+        <item>한메일</item>
+        <item>야후</item>
+    </string-array>
+</resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "671556883292",
+    "firebase_url": "https://dinewith-f316c.firebaseio.com",
+    "project_id": "dinewith-f316c",
+    "storage_bucket": "dinewith-f316c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671556883292:android:7e28335912fea21c",
+        "android_client_info": {
+          "package_name": "com.skku.jiwon_hae.graduate_project_android_streaming"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671556883292-oink3ue86k8lbckuik1i3nerif20b8m3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMp35RP-QDo7Ay9BvgC03YRV3QKxYX_m4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

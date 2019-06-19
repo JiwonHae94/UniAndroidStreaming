@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#78000000"
+    tools:context="com.example.jiwon_hae.streaming_application.streamer_client.client.live_end">
+
+    <ImageView
+        android:id="@+id/live_end_streamer_profile_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25mm"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/live_end_goodBye"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="안녕히가세요~"
+                    android:textColor="@color/white"
+                    android:textSize="5mm"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="0.5mm"
+                    android:layout_marginRight="0.5mm"/>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5mm"></Space>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LIVE가 끝났습니다"
+                android:gravity="center"
+                android:textSize="3mm"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="1mm"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="3mm"
+                    android:layout_height="3mm"
+                    android:src="@drawable/streaming_end_time"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/live_end_total_streaming_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00:00"
+                    android:textSize="2.9mm"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="0.3mm"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/live_end_toHome"
+                    android:layout_width="20mm"
+                    android:layout_height="7mm"
+                    android:background="@drawable/round_btn_to_home"
+                    android:text="홈"
+                    android:textSize="13dp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="10mm"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
